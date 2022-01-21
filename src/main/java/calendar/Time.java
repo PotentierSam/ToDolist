@@ -1,4 +1,4 @@
-package time;
+package calendar;
 
 public class Time {
     int hour;
@@ -14,7 +14,7 @@ public class Time {
         this.minute = minute;
     }
 
-    public void oneHourLater() {
+    public void oneHourMore() {
         if(getHour()==23) {
             this.hour = 0;
         } else {
@@ -22,7 +22,7 @@ public class Time {
         }
     }
 
-    public void oneHourEarlier() {
+    public void oneHourLess() {
         if(getHour()==0) {
             this.hour = 23;
         } else {
@@ -30,19 +30,19 @@ public class Time {
         }
     }
 
-    public void oneMinuteLater() {
+    public void oneMinuteMore() {
         if(getMinute()==60) {
             this.minute = 1;
-            oneHourLater();
+            oneHourMore();
         } else {
             this.minute = getMinute()+1;
         }
     }
 
-    public void oneMinuteEarlier() {
+    public void oneMinuteLess() {
         if(getMinute()==0) {
             this.minute = 59;
-            oneHourEarlier();
+            oneHourLess();
         } else {
             this.minute = (getMinute()-1);
         }

@@ -1,6 +1,5 @@
 package calendar;
 
-import time.Time;
 import org.junit.*;
 import static org.junit.Assert.assertEquals;
 
@@ -22,12 +21,12 @@ public class TestTime {
     public  void testOneHourLater() {
         Time t1;
         t1 = new Time();
-        t1.oneHourLater();
+        t1.oneHourMore();
         assertEquals(13,t1.getHour());
 
         Time t2;
         t2 = new Time(23,0);
-        t2.oneHourLater();
+        t2.oneHourMore();
         assertEquals(0, t2.getHour());
     }
 
@@ -35,12 +34,12 @@ public class TestTime {
     public  void testOneHourEarlier() {
         Time t1;
         t1 = new Time();
-        t1.oneHourEarlier();
+        t1.oneHourLess();
         assertEquals(11,t1.getHour());
 
         Time t2;
         t2 = new Time(0,0);
-        t2.oneHourEarlier();
+        t2.oneHourLess();
         assertEquals(23, t2.getHour());
     }
 
@@ -48,12 +47,12 @@ public class TestTime {
     public  void testOneMinuteLater() {
         Time t1;
         t1 = new Time();
-        t1.oneHourLater();
+        t1.oneHourMore();
         assertEquals(13,t1.getHour());
 
         Time t2;
         t2 = new Time(23,0);
-        t2.oneHourLater();
+        t2.oneHourMore();
         assertEquals(0, t2.getHour());
     }
 
@@ -61,12 +60,12 @@ public class TestTime {
     public  void testOneMinuteEarlier() {
         Time t1;
         t1 = new Time();
-        t1.oneMinuteEarlier();
+        t1.oneMinuteLess();
         assertEquals(59,t1.getMinute());
 
         Time t2;
         t2 = new Time(0,0);
-        t2.oneMinuteLater();
+        t2.oneMinuteLess();
         assertEquals(1, t2.getMinute());
     }
 }

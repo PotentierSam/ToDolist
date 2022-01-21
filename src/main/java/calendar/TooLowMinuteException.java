@@ -1,4 +1,4 @@
-package time;
+package calendar;
 
 public class TooLowMinuteException extends Exception {
     public TooLowMinuteException() {

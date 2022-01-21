@@ -1,6 +1,6 @@
-package date;
+package calendar;
 
-public class Date {
+public class Date implements APIDate {
     int year;
     int month;
     int day;

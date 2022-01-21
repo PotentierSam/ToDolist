@@ -1,4 +1,4 @@
-package time;
+package calendar;
 
 public class TooLowHourException extends Exception {
     public TooLowHourException() {

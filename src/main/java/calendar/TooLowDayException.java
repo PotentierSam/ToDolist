@@ -1,4 +1,4 @@
-package date;
+package calendar;
 
 public class TooLowDayException extends Exception {
     public TooLowDayException() {
